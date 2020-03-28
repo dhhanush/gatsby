@@ -1,0 +1,31 @@
+graphql queries 
+
+In gatsby-config we have to assign a key siteMetadata and then query it and then use it 
+
+
+packages 
+
+--gatsby-source-filesystem
+[to pull down the markdown and use it in our project]
+
+npm i --save gatsby-source-filesystem
+
+-- in gatsby-config.js file
+{
+      resolve: "gatsby-source-filesystem",
+      options: {
+        name: "src",
+        path: `${__dirname}/src/`,
+      },
+    },
+
+this will give access to new queries (file and allFile)
+
+to load the raw files from filesystem
+
+npm i --save gatsby-transformer-remark
+
+we will then have access to markdown remark and allMarkdownRemark
+
+we need path api to extract the file name for the slug(it is a built in node core module)
+
